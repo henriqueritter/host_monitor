@@ -1,13 +1,13 @@
---Cria banco PING
+/* Cria banco PING */
 CREATE DATABASE ping;
-
---Cria tabela hosts_status para armazenar os status dos hosts
+USE ping;
+/* Cria tabela hosts_status para armazenar os status dos hosts */
 CREATE TABLE hosts_status (HOST VARCHAR(20) PRIMARY KEY, STATUS VARCHAR(4), HOST_NAME VARCHAR(25));
 
---Cria tabela de controle de data para enviar o email diariamente
+/* Cria tabela de controle de data para enviar o email diariamente */
 CREATE TABLE controle_data (ID INT(2), DATA VARCHAR(4));
 
---Cria usuario PING e concede privilegios
+/* Cria usuario PING e concede privilegios */
 CREATE USER 'ping'@'localhost' IDENTIFIED BY 'senha';
 
 GRANT ALL PRIVILEGES ON ping.* TO 'ping'@'localhost';
