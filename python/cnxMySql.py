@@ -35,9 +35,9 @@ def updateStatus(host,status):
 # Consulta e retorna os hosts que serão usados de parâmetro no ping
 def consultaHosts():
 	cnx=mysql.connector.connect(host=bd_host, user=bd_user, passwd=bd_passwd, db=bd_banco)
-    cursor=cnx.cursor()
-    query="select host from hosts_status;"
-    cursor.execute(query)
+    	cursor=cnx.cursor()
+    	query="select host from hosts_status;"
+    	cursor.execute(query)
 	hosts=[]
 
 	for host, in cursor:
@@ -45,13 +45,12 @@ def consultaHosts():
 	return hosts
 
 	cursor.close()
-    cnx.close()
+    	cnx.close()
 
 # Consulta o status do host
 def consultaStatus(host):
 	cnx=mysql.connector.connect(host=bd_host, user=bd_user, passwd=bd_passwd, db=bd_banco)
 	cursor=cnx.cursor()
-	#SELECT
 	query="select status from hosts_status where host='%s';" % (host)
 	cursor.execute(query)
 
@@ -75,11 +74,11 @@ def consultaData():
 # Altera o valor da tabela de controle de datas
 def updateData(data):
 	cnx=mysql.connector.connect(host=bd_host, user=bd_user, passwd=bd_passwd, db=bd_banco)
-    cursor=cnx.cursor()
-    query="update controle_data set data='%s' where id=1;" % (data)
-    cursor.execute(query)
+   	cursor=cnx.cursor()
+    	query="update controle_data set data='%s' where id=1;" % (data)
+	cursor.execute(query)
 	query="commit"
 	cursor.execute(query)
-    cursor.close()
-    cnx.close
+   	cursor.close()
+    	cnx.close
 
