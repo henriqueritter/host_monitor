@@ -8,7 +8,7 @@
 * Finalidade: Enviar o arquivo de Log para os e-mails
 * cadastrados
 * -----------------------------------------------------
-* S.O:  Debian 9
+* S.O:  Debian 8
 * Versão do Python: 2.7
 '''
 
