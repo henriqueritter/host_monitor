@@ -6,7 +6,7 @@ MySQL 14.14
 Python 2.7.9
 PHP 5.6.38
 
-Descrição: É uma aplicação que monitora através da ferramenta 'Ping' do sistema operacional e armaeza estes dados para uma posterior consulta.
+Descrição: É uma aplicação que através da ferramenta 'Ping' do Sistema operacional monitora e armazena dados de status dos hosts.
 
 Módulos
 Python: Responsável por efetuar o ping nos hosts cadastrados e armazenar o status no banco de dados MySQL, também é responsável por encaminhar um e-mail no dia seguinte contendo o arquivo de Log que foi gerado com os hosts que estiveram offline no dia anterior.
