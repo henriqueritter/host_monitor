@@ -9,8 +9,8 @@
 * dados MySQL para retornar ou alterar os dados de hosts
 * ou controlar o envio de e-mail para que seja diário.
 * -----------------------------------------------------
-* S.O:  Debian 9
-* Versão do Python: 2.7
+* S.O:  Debian 8
+* Versão do Python: 2.7.9
 '''
 
 import sys
