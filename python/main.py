@@ -10,8 +10,8 @@
 * painel em PHP e caso o host esteja continuamente interrompido,
 * enviar um e-mail com a data e a identificação do host.
 * -----------------------------------------------------
-* S.O:  Debian 9
-* Versão do Python: 2.7
+* S.O:  Debian 8
+* Versão do Python: 2.7.9
 '''
 import os
 import time
