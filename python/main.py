@@ -53,7 +53,7 @@ def ping():
 		# apenas no proximo dia
 		updateData(data_atual)
     
-	# Para executar a cada 5 minutos sem agendar no crontab descomente as linhas abaixo
+	# Para executar a cada 5 minutos sem agendar no crontab descomente as linhas abaixo e insira um tempo em segundos (300 para 5min)
 	'''time.sleep(xSegundos)
 	ping() '''
 ping()
