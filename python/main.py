@@ -29,13 +29,17 @@ def ping():
 	hosts = consultaHosts()
 	for host in hosts:
 		resposta = os.system("ping -c 1 " + host + " > /dev/null 2>&1")
-		if resposta == 0:			#Altera o status dos hosts no banco
+		if resposta == 0:			#Altera o status dos hosts no banco para UP
 			updateStatus(host,"UP")
 		else:
 			stts=consultaStatus(host)
+			if stts=="UP":			#Se for a primeira vez que o host responder com falha
+				updateStatus(host,"INTR")  #sinaliza ele como uma oscilação
+			if stts=="INTR":		  #Se o host estiver sinalizado como intermitente
+				updateStatus(host,"DOWN") #Sinaliza ele como fora
 			if stts=="DOWN": 		#Se link ja estivesse offline, salva o status no log
 				salvarLog(host)
-			updateStatus(host,"DOWN")
+				updateStatus(host,"DOWN")
 
 	data_atual = time.strftime("%d%m")
 	data_bd = consultaData()
