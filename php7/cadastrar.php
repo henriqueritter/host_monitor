@@ -54,11 +54,11 @@ mysqli_free_result($dados);
 		<center>
 			<table>
 				<tr>
-					<td colspan="2"><center> <b><font size="5">Cadastro de Hosts</font> </b> </center> </td>
+					<td class="topo" colspan="2"><center> Cadastro de Hosts </center> </td>
 				</tr>
-				<tr>
-					<td> <font size="4"> <b><center> Host </center></b> </font> </td>
-					<td> <font size="4"> <b><center> Nome do Host </center></b> </font> </td>
+				<tr class="descricao">
+					<td> <center> Host </center> </td>
+					<td> <center> Nome do Host </center> </td>
 				</tr>
 				<tr>
 				<form action=" " method="POST">
@@ -70,16 +70,14 @@ mysqli_free_result($dados);
 					<td><center>    <input type="submit" name="excluir" value="Excluir" class="searchbutton"> </center> </td>
 				</tr>
 				<tr>
-					<td colspan="2">
+					<td class="rodape" colspan="2">
 						<center>
-							<font size="4">
 								<?php if($btgravar==="Gravar"){ ?>
 										O host <b><?php echo $sqlhost ?></b> foi gravado
 								<?php }
 									if($btexcluir==="Excluir"){  ?>
 										O host <b><?php echo $sqlhost ?></b> foi excluido
 								<?php } ?>
-							</font>
 						</center>
 					</td>
 				</tr>
