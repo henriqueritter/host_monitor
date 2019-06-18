@@ -53,10 +53,8 @@ $filial=array();
 			?>
 
 			 <tr>
-                                <td height="60" colspan= <?php echo count($filial); ?> >
-					<font size="6"><b>
-						<center>Status Links</center></b>
-					</font>
+                                <td class="cabecalho" height="60" colspan= <?php echo count($filial); ?> >
+						<center>Status Links</center>
 				</td>
                         </tr>
 
@@ -65,10 +63,8 @@ $filial=array();
 			while(count($filial)>$contador){ ?>
 				<td valign="top">
 				<table border="0"  cellpadding="0" cellspacing="4"> <!-- width = 260 -->
-					<tr height="4"><td colspan="2">
-						<font size="4">
-							<b><center><?php echo $filial[$contador];  ?></center></b>
-						</font>
+					<tr height="4"><td class="categoria" colspan="2">
+							<center><?php echo $filial[$contador];  ?></center>
 					</td></tr>
 						<?php
 						$query=("SELECT host, status FROM hosts_status where host_name='{$filial[$contador]}'" );
@@ -77,8 +73,8 @@ $filial=array();
 						while($linha=mysqli_fetch_assoc($dados)){
 						?>
 					<tr>
-						<td height="38">
-							<font size="4"><center><?php echo $linha['host'] ?></center></font>
+						<td class="host" height="38">
+							<center><?php echo $linha['host'] ?></center>
 						</td>
 						<td width="30" height="30"><center>
 							<?php if($linha['status']==="UP"){ ?> <img src="img/UP.gif">
