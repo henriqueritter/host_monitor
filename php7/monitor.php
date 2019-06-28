@@ -27,7 +27,7 @@ $filial=array();
 		<title>Monitor - Monitor de Hosts</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<meta http-equiv="refresh" content="15">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styles.css">
 		<script>
 			$(document).ready(function(){
 					window.location.href='#foo';
