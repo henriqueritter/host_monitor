@@ -48,7 +48,7 @@ mysqli_free_result($dados);
 	<head>
 		<title>Cadastrar - Monitor de Hosts</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<center>
