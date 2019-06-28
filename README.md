@@ -1,10 +1,10 @@
 # host_monitor
 
-S.O Debian 8.11 (Jessie) x64
+S.O Debian 9.9.0  x64
 Apache 2.4.10
 MySQL 14.14
 Python 2.7.9
-PHP 5.6.38
+PHP 7.0
 
 Descrição: É uma aplicação que através da ferramenta 'Ping' do Sistema operacional monitora e armazena dados de status dos hosts.
 
