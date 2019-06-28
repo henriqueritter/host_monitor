@@ -60,7 +60,7 @@ pico /etc/host_monitor/sendMail.py
 # Depois agendar no crontab para a cada 5 minutos executar o comando em python
 crontab -e
 # Adicionar a linha:
-*/5 * * * * /etc/host_monitor/python/main.py
+*/5 * * * * /etc/host_monitor/main.py
 
 # Pronto só testar acessando via Browser o endereço: localhost/monitor 
 # E gravar algum host e esperar a execução do arquivo /etc/host_monitor/main.py 
