@@ -9,7 +9,7 @@
 su -
 #Inserir a senha do root
 apt-get update
-apt-get install mysql-server apache2 php7.0 php7.0-mysql python-mysql.connector /Y 
+apt-get install mysql-server apache2 php7.0 php7.0-mysql python-mysql.connector -y
 #-----------------------------
 # Entrar no Mysql e alterar senha padrão do ROOT
 mysql
