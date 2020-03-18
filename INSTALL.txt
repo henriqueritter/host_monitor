@@ -22,7 +22,7 @@ mysql -u root -p < /opt/host_monitor-master/mysql/ping.sql
 # Entrar no Mysql e alterar senha padrão do ROOT
 mysql
 MYSQL[(none)]>use mysql;
-MYSQL[mysql]>set password for 'root'@'localhost' = PASSWORD('novasenha');
+MYSQL[mysql]>set password for 'ping'@'localhost' = PASSWORD('novasenha');
 MYSQL[mysql]>flush privileges;
 MYSQL[mysql]>exit
 #-----------------------------
