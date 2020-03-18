@@ -1,4 +1,4 @@
-# host_monitor
+# Host_Monitor
 
 S.O Debian 9.9.0  x64
 Apache 2.4.10
@@ -6,7 +6,8 @@ MySQL 14.14
 Python 2.7.9
 PHP 7.0
 
-## Descrição: É uma aplicação que através da ferramenta 'Ping' do Sistema operacional monitora e armazena dados de status dos hosts.
+### Descrição 
+É uma aplicação que através recurso 'ping' do Sistema operacional monitora e armazena dados de status dos hosts.
 
 ### Módulos
 * Python: Responsável por efetuar o ping nos hosts cadastrados e armazenar o status no banco de dados MySQL, também é responsável por encaminhar um e-mail no dia seguinte contendo o arquivo de Log que foi gerado com os hosts que estiveram offline no dia anterior.
