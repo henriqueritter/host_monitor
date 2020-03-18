@@ -19,13 +19,6 @@ unzip master.zip
 # Executar o script SQL no MySQL para criar o usuário 'ping' e o banco 'ping' com as tabelas
 mysql -u root -p < /opt/host_monitor-master/mysql/ping.sql
 #-----------------------------
-# Entrar no Mysql e alterar senha padrão do ROOT
-mysql
-MYSQL[(none)]>use mysql;
-MYSQL[mysql]>set password for 'ping'@'localhost' = PASSWORD('novasenha');
-MYSQL[mysql]>flush privileges;
-MYSQL[mysql]>exit
-#-----------------------------
 # Criar pasta monitor dentro do /var/www/html 
 mkdir /var/www/html/monitor					#Alterar a permissao CHMOD(CHOWN) usuario WWW-DATA
 chmod 777 /var/www/html/monitor/
@@ -50,7 +43,7 @@ chmod +x /etc/host_monitor/main.py
 # Após copiar os arquivos e pastas executar ose seguintes passos:
 
 # Alterar as configurações de envio de email do arquivo /etc/host_monitor/main.py na linha 'enviar_email()'
-# Sendo: enviar_email('email_origem@dominio.com',['email_destinatario@dominio.com','outro_destinatario@dominio.com], 'Status Links', 'Status Links', ['/var/log/hosts_status.log'], 'mail.server.a.ser.usado.para.envio.com.br')
+# Sendo: enviar_email('email_origem@dominio.com',['email_destinatario@dominio.com','outro_destinatario@dominio.com], 'Status Links', 'Status Links', ['/var/log/hosts_status.log'], 'mail.smtp.do.server.a.ser.usado.para.envio.com.br')
 pico /etc/host_monitor/main.py
 
 # Depois alterar o arquivo: /etc/host_monitor/sendMain.py na linha 'smtp.login()'
@@ -60,9 +53,28 @@ pico /etc/host_monitor/sendMail.py
 # Depois agendar no crontab para a cada 5 minutos executar o comando em python
 crontab -e
 # Adicionar a linha:
-*/5 * * * * /etc/host_monitor/main.py
+*/2 * * * * /etc/host_monitor/main.py
 
 # Pronto só testar acessando via Browser o endereço: localhost/monitor 
 # E gravar algum host e esperar a execução do arquivo /etc/host_monitor/main.py 
 # Ou executar manualmente via linha de comando digitando /etc/host_monitor/main.py
+
+#----------------------------------------------------------
+# OPCIONAL: Entrar no Mysql e alterar senha padrão do MYSQL e alterar nos arquivos necessários
+mysql
+MYSQL[(none)]>use mysql;
+MYSQL[mysql]>set password for 'ping'@'localhost' = PASSWORD('novasenha');
+MYSQL[mysql]>flush privileges;
+MYSQL[mysql]>exit
+#--------------
+# Acessar os arquivos do PHP
+pico /var/www/html/monitor/index.php
+#Alterar o valor da variavel $pass para a senha que você definiu anteriormente no MySQL
+pico /var/www/html/monitor/monitor.php
+#Alterar o valor da variavel $pass para a senha que você definiu anteriormente no MySQL
+#--------------
+# Alterar a senha do MySQL no arquivo de conexão do Python
+pico /etc/host_monitor/cnxMySql.py
+#altere o valor da variavel bd_passwd e coloque a senha que você definiu anteriormente.
+
 
