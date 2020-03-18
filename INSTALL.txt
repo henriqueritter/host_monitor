@@ -11,13 +11,6 @@ su -
 apt-get update
 apt-get install mysql-server apache2 php7.0 php7.0-mysql python-mysql.connector -y
 #-----------------------------
-# Entrar no Mysql e alterar senha padrão do ROOT
-mysql
-MYSQL[(none)]>use mysql;
-MYSQL[mysql]>set password for 'root'@'localhost' = PASSWORD('novasenha');
-MYSQL[mysql]>flush privileges;
-MYSQL[mysql]>exit
-#-----------------------------
 # Baixar o projeto do Github
 cd /opt/
 wget https://github.com/henriqueritter/host_monitor/archive/master.zip
@@ -25,6 +18,13 @@ unzip master.zip
 #-----------------------------
 # Executar o script SQL no MySQL para criar o usuário 'ping' e o banco 'ping' com as tabelas
 mysql -u root -p < /opt/host_monitor-master/mysql/ping.sql
+#-----------------------------
+# Entrar no Mysql e alterar senha padrão do ROOT
+mysql
+MYSQL[(none)]>use mysql;
+MYSQL[mysql]>set password for 'root'@'localhost' = PASSWORD('novasenha');
+MYSQL[mysql]>flush privileges;
+MYSQL[mysql]>exit
 #-----------------------------
 # Criar pasta monitor dentro do /var/www/html 
 mkdir /var/www/html/monitor					#Alterar a permissao CHMOD(CHOWN) usuario WWW-DATA
