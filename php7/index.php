@@ -58,7 +58,7 @@ mysqli_free_result($dados);
 				</tr>
 				<tr class="descricao">
 					<td> <center> Host </center> </td>
-					<td> <center> Nome do Host </center> </td>
+					<td> <center> Grupo do Host </center> </td>
 				</tr>
 				<tr>
 				<form action=" " method="POST">
