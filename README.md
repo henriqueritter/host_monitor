@@ -1,6 +1,6 @@
 # Host_Monitor
 
-S.O Debian 9.9.0  x64
+S.O Debian 9.9.0 x64 || Mint 16  x64
 Apache 2.4.10
 MySQL 14.14
 Python 2.7.9
