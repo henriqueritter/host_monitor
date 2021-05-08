@@ -10,10 +10,10 @@ Python 2.7.9
 PHP 7.0
 
 ### Descrição 
-Host Monitor é uma aplicação para checar a disponibilidade de alguns hosts, através do recurso 'ping' do Sistema operacional consulta e armazena os dados de status dos hosts, exibe em tempo real em um painel e envia um e-mail de alerta caso algum ativo não responda a solicitação.
+O Host Monitor foi desenvolvido para auxiliar o departamento de T.I, é uma aplicação utilizada para checar a disponibilidade de alguns hosts, utilizando o recurso 'ping' do Sistema operacional a aplicação consulta e armazena os dados de status dos hosts, exibe em tempo real em um painel e envia um e-mail contendo os hosts e o período em que estiveram offline.
 
 ### Módulos
-* Python: Responsável por efetuar o ping nos hosts cadastrados e armazenar o status de rede no banco de dados MySQL, também é responsável por encaminhar um e-mail ao virar o dia contendo o arquivo de Log que foi gerado com os hosts que estiveram offline durante o dia.
+* Python: Responsável por efetuar o ping nos hosts cadastrados e armazenar o status de rede no banco de dados MySQL, também é responsável por enviar um e-mail diário contendo o arquivo de Log que foi gerado com os hosts que estiveram offline durante o dia.
 
 * PHP: A Página monitor.php tem por finalidade exibir os hosts e seus status e a página cadastrar.php é exibe o painel junto ao formulário para cadastrar ou excluir os hosts do banco de dados.
 
