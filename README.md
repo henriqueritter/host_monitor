@@ -22,6 +22,6 @@ Host Monitor é uma aplicação para checar a disponibilidade de alguns hosts, a
 
 ### Telas da Aplicação
 
-![Image of Cadastro](https://github.com/henriqueritter/host_monitor/blob/master/print_tela_cadastro.png)
+![Tela de Cadastro](https://github.com/henriqueritter/host_monitor/blob/master/print_tela_cadastro.png)
 
-![Image of Monitor](https://github.com/henriqueritter/host_monitor/blob/master/print_tela_monitor.png)
+![Painel dos hosts](https://github.com/henriqueritter/host_monitor/blob/master/print_tela_monitor.png)
