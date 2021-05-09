@@ -1,6 +1,18 @@
-# Host Monitor
+<h1 align="center">
+Host Monitor
+</h1>
 
+<p align="center">
 <img alt="Debian" src="https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white" /> <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?&style=for-the-badge&logo=apache&logoColor=white"/> <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/> <img alt="Python" src="https://img.shields.io/badge/python-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/> <img alt="PHP" src="https://img.shields.io/badge/php-%23777BB4.svg?&style=for-the-badge&logo=php&logoColor=white"/>
+</p>
+
+### Índice
+- [Ambiente](#ambiente)
+- [Descrição](#descrição)
+- [Módulos](#módulos)
+- [Telas da Aplicação](#telas-da-aplicação)
+- [Instalação](#instalação)
+- [Licença](#licença)
 
 ### Ambiente
 Debian 9.9 x64 || Mint 16 x64
@@ -110,5 +122,8 @@ pico /var/www/html/monitor/monitor.php
 pico /etc/host_monitor/cnxMySql.py
 #altere o valor da variavel bd_passwd e coloque a senha que você definiu anteriormente.
 ```
+
+### Licença
+MIT
 
 
